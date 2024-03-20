@@ -1,0 +1,23 @@
+<p>ajout-produit works!</p>
+<form (ngSubmit)="validerFormulaire()" #formulaire="ngForm">
+    
+        <tr>
+          <td>Categorie:</td>
+          <td><input type="text" name="Categorie" type="text" [(ngModel)]="produitCourant.id" required /></td>
+        </tr>
+        <tr>
+          <td>Code:</td>
+          <td><input type="text" name="code" [(ngModel)]="produitCourant.code" /></td>
+        </tr>
+        <tr>
+          <td>Désignation:</td>
+          <td><input type="text" name="designation" [(ngModel)]="produitCourant.designation" /></td>
+        </tr>
+        <tr>
+          <td>Prix:</td>
+          <td><input type="text" name="prix" [(ngModel)]="produitCourant.prix" /></td>
+        </tr>
+  
+  
+    <button type="submit" [disabled]="!formulaire.valid">Ajouter Produit</button>
+  </form>

@@ -1,0 +1,21 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+
+
+
+
+
+
+
+/* You can add global styles to this file, and also import other style files */
+/*.vertical-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /*.custom-button {
+    width: 150px; /* Ajustez la largeur selon vos besoins */
+   /* height: 40px; /* Ajustez la hauteur selon vos besoins */
+   /* margin-bottom: 10px; /* Espace entre les boutons */
+  

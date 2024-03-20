@@ -1,0 +1,62 @@
+<!--
+<div [ngClass]="containerClass + ' your-existing-classes'">
+  <h1 style="color: rgba(46, 10, 230, 0.973);">Fiche Produit</h1>
+  <form #produitForm="ngForm" (ngSubmit)="validerFormulaire(produitForm)">
+    <table>
+      <tr>
+        <td>Id:</td>
+        <td><input id="id" name="id" type="text" [(ngModel)]="produitCourant.id" required /></td>
+      </tr>
+      <tr>
+        <td>Code:</td>
+        <td><input type="text" name="code" [(ngModel)]="produitCourant.code" /></td>
+      </tr>
+      <tr>
+        <td>Désignation:</td>
+        <td><input type="text" name="designation" [(ngModel)]="produitCourant.designation" /></td>
+      </tr>
+      <tr>
+        <td>Prix:</td>
+        <td><input type="text" name="prix" [(ngModel)]="produitCourant.prix" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <button type="submit" [disabled]="!produitForm.form.valid || produitExiste(produitCourant.id || 0)">Valider</button>
+          <button type="button" (click)="effacerSaisie()">Effacer</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+-->
+
+
+<div class="container">
+  <h1 style="color: rgba(46, 10, 230, 0.973);"class="display-4">Liste des produits</h1>
+  
+  <table [ngClass]="'table table-striped'">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Code</th>
+        <th>Désignation</th>
+        <th>Prix</th>
+        <th colspan="2">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of produits">
+        <td>{{ p.id }}</td>
+        <td>{{ p.code }}</td>
+        <td>{{ p.designation }}</td>
+        <td>{{ p.prix }}</td>
+        <td>
+          <button type="button" (click)="editerProduit(p)" class="btn btn-secondary btn-sm"><i class="bi bi-pen"></i>Editer</button>
+        </td>
+        <td>
+          <button type="button" (click)="supprimerProduit(p)" class="btn btn-danger"><i class="bi bi-trash"></i>Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
